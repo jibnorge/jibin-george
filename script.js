@@ -120,6 +120,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
+    // Observe experience cards
+    const experienceCards = document.querySelectorAll('.experience-card');
+    experienceCards.forEach(card => {
+        card.classList.add('fade-in');
+        observer.observe(card);
+    });
+
     // Observe project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
